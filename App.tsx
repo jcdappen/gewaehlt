@@ -55,6 +55,7 @@ const App: React.FC = () => {
         const progress = ((currentQuestionIndex + 1) / QUESTIONS.length) * 100;
         return (
           <QuestionScreen
+            key={currentQuestionIndex}
             questionData={QUESTIONS[currentQuestionIndex]}
             onAnswer={handleAnswer}
             progress={progress}

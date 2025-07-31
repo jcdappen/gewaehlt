@@ -7,17 +7,30 @@ interface QuestionScreenProps {
   progress: number;
 }
 
-const QuestionCard: React.FC<{ option: Option, onClick: () => void }> = ({ option, onClick }) => (
-  <div 
-    onClick={onClick}
-    className="bg-white/10 rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300 ease-in-out hover:bg-white/20 hover:scale-105 transform"
-  >
-    <img src={option.image} alt={option.text} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" />
-    <div className="p-4">
-      <h3 className="text-lg font-semibold text-white text-center">{option.text}</h3>
+const QuestionCard: React.FC<{ option: Option, onClick: () => void }> = ({ option, onClick }) => {
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onClick();
+    }
+  };
+
+  return (
+    <div 
+      onClick={onClick}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+      aria-label={`Wähle ${option.text}`}
+      className="bg-white/10 rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300 ease-in-out hover:bg-white/20 hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-amber-400 focus:ring-opacity-75"
+    >
+      <img src={option.image} alt={option.text} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" />
+      <div className="p-4">
+        <h3 className="text-lg font-semibold text-white text-center">{option.text}</h3>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const QuestionScreen: React.FC<QuestionScreenProps> = ({ questionData, onAnswer, progress }) => {
   return (
