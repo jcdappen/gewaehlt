@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Question, Option } from '../types';
 
@@ -23,7 +22,14 @@ const QuestionCard: React.FC<{ option: Option, onClick: () => void }> = ({ optio
 const QuestionScreen: React.FC<QuestionScreenProps> = ({ questionData, onAnswer, progress }) => {
   return (
     <div className="w-full max-w-5xl mx-auto px-4 py-8 animate-fade-in">
-      <div className="w-full bg-white/20 rounded-full h-2.5 mb-8">
+      <div 
+        role="progressbar" 
+        aria-valuenow={progress} 
+        aria-valuemin={0} 
+        aria-valuemax={100} 
+        aria-label={`Fortschritt: ${Math.round(progress)}%`}
+        className="w-full bg-white/20 rounded-full h-2.5 mb-8"
+      >
         <div className="bg-amber-400 h-2.5 rounded-full transition-all duration-500" style={{ width: `${progress}%` }}></div>
       </div>
       <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10 font-serif">
