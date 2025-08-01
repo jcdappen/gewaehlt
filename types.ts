@@ -1,17 +1,25 @@
 
-export interface Option {
-  id: string;
+export enum AppScreen {
+  Welcome,
+  Question,
+  Transition,
+  Revelation,
+}
+
+export type PersonalityTrait = 'fighter' | 'creative' | 'healer' | 'adventurer' | 'community' | 'leader' | 'thinker';
+
+export interface QuestionOption {
   text: string;
   image: string;
+  trait: PersonalityTrait;
 }
 
 export interface Question {
   id: string;
-  question: string;
-  options: Option[];
+  category: string;
+  questionText: string;
+  options: QuestionOption[];
 }
 
-export interface Answer {
-  questionId: string;
-  answerId: string;
-}
+export type Answers = Record<string, string>;
+export type AnswerTraits = Record<string, PersonalityTrait>;

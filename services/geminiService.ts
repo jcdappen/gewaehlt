@@ -1,8 +1,8 @@
-import { Answer } from '../types';
+import { Answers } from '../types';
 
-export const getPersonalizedMessage = async (name: string, answers: Answer[]): Promise<string> => {
+export const generatePersonalizedReason = async (name: string, answers: Answers): Promise<string> => {
   try {
-    const response = await fetch('/.netlify/functions/getPersonalizedMessage', {
+    const response = await fetch('/.netlify/functions/gemini', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -11,17 +11,15 @@ export const getPersonalizedMessage = async (name: string, answers: Answer[]): P
     });
 
     if (!response.ok) {
-        // Try to read the error message from the serverless function
-        const errorData = await response.json().catch(() => ({})); // catch if body is not json
-        console.error("Error from serverless function:", response.status, errorData);
-        throw new Error(`Server error: ${response.statusText}`);
+        throw new Error(`Funktionsaufruf fehlgeschlagen mit Status: ${response.status}`);
     }
 
     const data = await response.json();
-    return data.message;
+    return data.reason;
+
   } catch (error) {
-    console.error("Error calling serverless function:", error);
-    // Return the same fallback message for any kind of error (network, server, etc.)
-    return "Weil du einzigartig und wertvoll bist. Gott hat einen besonderen Plan für dich, der größer ist als alle Entscheidungen, die du treffen kannst. Er liebt dich bedingungslos.";
+    console.error("Fehler beim Aufruf der Netlify-Funktion:", error);
+    // Gibt eine Fallback-Nachricht zurück
+    return `Weil du ein einzigartiges und geliebtes Geschöpf bist. Gott sieht dein Herz, deine Stärken und deine Träume. Er hat einen wunderbaren Plan für dein Leben und möchte eine persönliche Beziehung mit dir.`;
   }
 };
