@@ -1,5 +1,5 @@
 {
-  "name": "gott-hat-dich-gewählt",
+  "name": "ich-habe-dich-gewählt",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,9 +10,7 @@
   },
   "dependencies": {
     "react-dom": "^19.1.1",
-    "react": "^19.1.1",
-    "@google/genai": "^1.12.0",
-    "@netlify/functions": "^4.2.1"
+    "react": "^19.1.1"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

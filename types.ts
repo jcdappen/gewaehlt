@@ -1,25 +1,8 @@
+export type AgeGroup = 'under20' | '20-30' | 'over30';
 
-export enum AppScreen {
-  Welcome,
-  Question,
-  Transition,
-  Revelation,
-}
-
-export type PersonalityTrait = 'fighter' | 'creative' | 'healer' | 'adventurer' | 'community' | 'leader' | 'thinker';
-
-export interface QuestionOption {
-  text: string;
-  image: string;
-  trait: PersonalityTrait;
-}
+export type AppState = 'welcome' | 'age-selection' | 'question-flow' | 'transition' | 'letter' | 'cta';
 
 export interface Question {
-  id: string;
-  category: string;
-  questionText: string;
-  options: QuestionOption[];
+  id: number;
+  question: string;
 }
-
-export type Answers = Record<string, string>;
-export type AnswerTraits = Record<string, PersonalityTrait>;

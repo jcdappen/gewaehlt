@@ -1,6 +1,5 @@
 {
-  "name": "Gott hat dich gewählt",
-  "description": "Eine interaktive Reise der Selbstentdeckung, die enthüllt, warum du auf einzigartige Weise erwählt wurdest. Beantworte ein paar Fragen und erhalte eine persönliche, ermutigende Botschaft.",
-  "requestFramePermissions": [],
-  "prompt": ""
+  "name": "Ich habe dich gewählt",
+  "description": "Eine interaktive, mobile-first Web-App, die Nutzer durch persönliche Wahlerfahrungen führt und mit der kraftvollen Botschaft abschließt, dass sie von Gott gewählt sind. Die App soll emotional berühren und zur Selbstreflexion über die eigene Wertigkeit einladen.",
+  "requestFramePermissions": []
 }
