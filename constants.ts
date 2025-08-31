@@ -40,7 +40,7 @@ export const questionsByAge: Record<AgeGroup, Question[]> = {
 };
 
 export const ANSWER_OPTIONS = [
-  "Ja, das kenne ich!",
+  "Ja",
   "Gelegentlich",
-  "Das passiert mir selten",
+  "Eher nicht so",
 ];
