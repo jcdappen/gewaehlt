@@ -12,19 +12,23 @@ const GodLetterScreen: React.FC<GodsLetterScreenProps> = ({ onComplete, name }) 
   const fullText = `Hallo ${name},
 
 Vielleicht kennst du mich nicht, aber ICH kenne dich.
-Ich kenne jeden deiner Schritte, jeden deiner Gedanken, jede Nacht, in der du nicht schlafen konntest. (Psalm 139,1-3)
+Ich kenne jeden deiner Schritte, jeden deiner Gedanken, jede Nacht, in der du nicht schlafen konntest.
 
 Ich habe DICH gewählt.
 
-Nicht weil du perfekt wärst oder alles richtig gemacht hättest. Ich habe dich gewählt, weil du mein Meisterwerk bist. (Epheser 2,10)
-Du warst kein Zufall. Schon bevor die Welt entstand, kannte ich dich und hatte wunderbare Pläne für dein Leben. (Jeremia 1,5 & 29,11)
-Während andere dich vielleicht übersehen haben, sehe ICH dich. Während andere dich abgelehnt haben mögen, erwähle ICH dich. (1. Petrus 2,9)
+Nicht weil du perfekt wärst oder alles richtig gemacht hättest. Ich habe dich gewählt, weil du mein Meisterwerk bist. 
+Du warst kein Zufall. Schon bevor die Welt entstand, kannte ich dich und hatte wunderbare Pläne für dein Leben.
+
+Während andere dich vielleicht übersehen haben, sehe ICH dich. Während andere dich abgelehnt haben mögen, erwähle ICH dich.
+
 Du bist wertvoll – nicht wegen dem, was du leistest, sondern einfach, weil ich dich geschaffen habe.
 
-Meine Wahl steht fest. Sie hängt nicht von deiner Vergangenheit ab oder davon, ob andere dich wählen. ICH habe dich gewählt – und meine Entscheidung ändert sich nie. (Römer 8,38-39)
+Meine Wahl steht fest. Sie hängt nicht von deiner Vergangenheit ab oder davon, ob andere dich wählen.
+ICH habe dich gewählt – und meine Entscheidung ändert sich nie.
 
 Du bist mein geliebtes Kind, mein Meisterwerk.
-Ich kenne jeden deiner Träume, jede deiner Ängste, jede Träne, die du geweint hast. Und trotz allem – nein, gerade deshalb – sage ich: Du bist erwählt.
+Ich kenne jeden deiner Träume, jede deiner Ängste, jede Träne, die du geweint hast.
+Und trotz allem – nein, gerade deshalb – sage ich: Du bist erwählt.
 
 Aber jetzt liegt die Entscheidung bei dir:
 Willst du mein Kind werden? Willst du meine Wahl annehmen?
