@@ -15,10 +15,11 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
     };
   }
   
-  const { DATABASE_URL } = process.env;
+  // Use the variable provided by the Netlify Neon Extension
+  const { NETLIFY_DATABASE_URL } = process.env;
 
-  if (!DATABASE_URL) {
-    console.error('Database URL is not set.');
+  if (!NETLIFY_DATABASE_URL) {
+    console.error('NETLIFY_DATABASE_URL is not set. Ensure the Neon extension is configured correctly in Netlify.');
     return {
       statusCode: 500,
       body: JSON.stringify({ message: 'Server configuration error.' }),
@@ -26,7 +27,7 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
     };
   }
 
-  const sql = postgres(DATABASE_URL, { ssl: 'require' });
+  const sql = postgres(NETLIFY_DATABASE_URL, { ssl: 'require' });
 
   try {
     // Using an "upsert" operation.
