@@ -24,6 +24,7 @@ export const questionsByAge: Record<AgeGroup, Question[]> = {
     { id: 8, question: "Wurdest du als Pate oder Patin für ein Kind ausgewählt?" },
     { id: 9, question: "Kommen WG-Mitbewohner oder Nachbarn oft zu dir, wenn sie Rat brauchen?" },
     { id: 10, question: "Wurdest du in einem Verein oder einer Organisation in den Vorstand gewählt?" },
+    { id: 11, question: "Warst du bei der Mannschaftswahl im Sportunterricht einer der ersten?" },
   ],
   'over30': [
     { id: 1, question: "Haben Kollegen dich als Betriebsrat oder Teamleiter gewählt?" },
@@ -36,6 +37,7 @@ export const questionsByAge: Record<AgeGroup, Question[]> = {
     { id: 8, question: "Vertrauen dir Menschen ihre tiefsten Sorgen und Ängste an?" },
     { id: 9, question: "Wurdest du von der Gemeinde oder Nachbarschaft für ein Ehrenamt ausgewählt?" },
     { id: 10, question: "Fühlen sich Menschen unterschiedlicher Generationen zu dir hingezogen und suchen deine Nähe?" },
+    { id: 11, question: "Warst du bei der Mannschaftswahl im Sportunterricht einer der ersten?" },
   ],
 };
 
