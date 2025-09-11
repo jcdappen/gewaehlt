@@ -27,7 +27,18 @@ const App: React.FC = () => {
 
   const handleQuestionsComplete = () => setAppState('transition');
   const handleTransitionComplete = () => setAppState('letter');
-  const handleLetterComplete = () => setAppState('cta');
+
+  const handleLetterComplete = async () => {
+    try {
+      // Fire-and-forget call to the Netlify function to increment the counter.
+      // We don't need to wait for the response to proceed.
+      // The user experience isn't blocked if this fails.
+      await fetch('/.netlify/functions/increment-counter', { method: 'POST' });
+    } catch (error) {
+      console.error("Failed to increment usage counter:", error);
+    }
+    setAppState('cta');
+  };
 
   const handleRestart = () => {
     setAgeGroup(null);
